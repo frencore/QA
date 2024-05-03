@@ -1,2 +1,5 @@
-cypress/
+cypress/downloads
+
+cypress/e2e/1-getting-started
+
 node_modules/
