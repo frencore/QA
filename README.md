@@ -8,9 +8,9 @@ este es el repositorio para POC de Cypress
  errores al ejecutar script Windows
  
  ## Error de politicas
- 
+
  ### Ejecutar PowerShell como administrador, Ver politicas:
-    **Get-ExecutionPolicy -List**
+    Get-ExecutionPolicy -List
 
  ### Dar permisos:
-    **Set-ExecutionPolicy RemoteSigned -Scope CurrentUser**
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
