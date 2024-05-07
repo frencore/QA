@@ -1,14 +1,26 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://example.cypress.io')
+    cy.visit('https://example.cypress.io');
   })
 })
 
 describe('Test ejemplo', () => {
+  let a = 1 + 1;
+  let b = 2;
   it('Descripcion Prueba-puede ser numero de ticket', () => {
-    let a = 1 + 1;
-    let b = 2;
     expect(a == b).to.equal(true);
+  });
 
-  })
+  it('descripcion prueba restar', () => {
+    expect(a - b).to.equal(0);
+  });
 });
+
+describe('Casos de prueba Busqueda', () => {
+  it('Busqueda con resultados', () => {
+    cy.visit('https://www.tricentis.com/search');
+    cy.get('.SearchTemplate_heading__input__X2uCO').type('Products');
+    cy.get('.SearchTemplate_heading__submit__fsd7Q').click();
+    cy.get(':nth-child(1) > .SearchResultItem_result-item__title__3sI2_').contains('Products');
+  })
+}) 
