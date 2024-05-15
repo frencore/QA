@@ -17,17 +17,30 @@ describe('Test ejemplo', () => {
 });
 
 describe('Casos de prueba Busqueda', () => {
-  it('Busqueda con resultados', () => {
+  before(() => {
+    cy.log('Ejecutando precondiciones de TODAS a las pruebas');
+  });
+
+  beforeEach(()=>{
+    cy.log('Ejecutando precondiciones POR CADA PRUEBA');
     cy.visit('https://www.tricentis.com/search');
     cy.wait(2000);
+  });
+  afterEach(()=>{
+    cy.log('Ejecutando postcondiciones POR CADA PRUEBA');
+  });
+
+  it('Busqueda con resultados', () => {
     cy.get('.SearchTemplate_heading__input__X2uCO').type('Products');
     cy.get('.SearchTemplate_heading__submit__fsd7Q').click();
     cy.get(':nth-child(1) > .SearchResultItem_result-item__title__3sI2_').contains('Products');
-  })
+  });
   it('escribir y borrar', () => {
-    cy.visit('https://www.tricentis.com/search');
-    cy.wait(2000);
     //si se va a probar distintos comportamientos de un elemento mejor se encadena todo
     cy.get('.SearchTemplate_heading__input__X2uCO').clear().type('Products').clear().type('Hola');
-  })
+  });
+  
+  after(() => {
+    cy.log('Ejecutando postcondiciones de TODAS a las pruebas');
+  });
 }) 
