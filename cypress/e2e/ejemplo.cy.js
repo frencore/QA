@@ -2,7 +2,7 @@ describe('template spec', () => {
   it('passes', () => {
     cy.visit('https://example.cypress.io');
   })
-})
+});
 
 describe('Test ejemplo', () => {
   let a = 1 + 1;
@@ -21,12 +21,12 @@ describe('Casos de prueba Busqueda', () => {
     cy.log('Ejecutando precondiciones de TODAS a las pruebas');
   });
 
-  beforeEach(()=>{
+  beforeEach(() => {
     cy.log('Ejecutando precondiciones POR CADA PRUEBA');
     cy.visit('https://www.tricentis.com/search');
     cy.wait(2000);
   });
-  afterEach(()=>{
+  afterEach(() => {
     cy.log('Ejecutando postcondiciones POR CADA PRUEBA');
   });
 
@@ -39,8 +39,9 @@ describe('Casos de prueba Busqueda', () => {
     //si se va a probar distintos comportamientos de un elemento mejor se encadena todo
     cy.get('.SearchTemplate_heading__input__X2uCO').clear().type('Products').clear().type('Hola');
   });
-  
+
   after(() => {
     cy.log('Ejecutando postcondiciones de TODAS a las pruebas');
   });
-}) 
+});
+
