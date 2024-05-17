@@ -6,7 +6,6 @@ describe('Comandos con Cypress checkbox y radio', () => {
     cy.visit('https://example.cypress.io/commands/actions');
   });
 
-
   it('Solo selecciona los checkbox y radio que no estan agrupadoss', () => {
     cy.log('verificación coincidentes o elementos de radio en sucesión');
     cy.get('.action-checkboxes [type="checkbox"]').not('[disabled]').check();
@@ -54,8 +53,6 @@ describe('Comandos con Cypress Select',()=>{
     cy.log('al obtener multiples valores seleccionados los compara usando chai');
     cy.get('.action-select-multiple').invoke('val').should('deep.equal', ['fr-apples', 'fr-oranges', 'fr-bananas']);
   });
-
- 
 });
 
 describe('Para obtener un elemento DOM en un índice específico',()=>{
