@@ -3,5 +3,6 @@ cypress/e2e/1-getting-started
 cypress/e2e/2-advanced-examples
 node_modules/
 cypress/fixtures/profile.json
+cypress/fixtures/example.json
 cypress/fixtures/users.json
 cypress/screenshots/
