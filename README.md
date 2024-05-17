@@ -2,10 +2,16 @@
 este es el repositorio para POC de Cypress
 
 # Comando para instalar Cypress
-   npm install cypress --save-dev
+    npm install cypress --save-dev
 
 # Comando para ejecutar proyecto
- .\node_modules\.bin\cypress open 
+    .\node_modules\.bin\cypress open 
+
+# Comando para ejecutar modo Headless
+    .\node_modules\.bin\cypress run 
+
+# Configuracion
+    https://docs.cypress.io/guides/references/configuration#Screenshots 
 
  ## Notas:
  errores al ejecutar script Windows
@@ -17,3 +23,18 @@ este es el repositorio para POC de Cypress
 
  ### Dar permisos:
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+## Para Habilitar videos de las pruebas
+    https://docs.cypress.io/guides/guides/screenshots-and-videos 
+
+### cypress.config.js
+
+```
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:1234',
+  },
+})
+```
