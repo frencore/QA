@@ -23,3 +23,6 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('escribirYBorrar', (primerTexto, segundoTexto) => {
+    cy.get('.SearchTemplate_heading__input__X2uCO').clear().type(primerTexto).clear().type(segundoTexto);
+})

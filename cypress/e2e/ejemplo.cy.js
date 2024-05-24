@@ -10,8 +10,8 @@ describe('Test ejemplo', () => {
   let a = 1 + 1;
   let b = 2;
   it('Descripcion Prueba-puede ser numero de ticket', () => {
-    expect(a == b,'ambos terminos tienen que ser iguales').to.equal(true);
-    expect(a == b,'ambos terminos tienen que ser iguales').to.be.true;
+    expect(a == b, 'ambos terminos tienen que ser iguales').to.equal(true);
+    expect(a == b, 'ambos terminos tienen que ser iguales').to.be.true;
   });
 
   it('descripcion prueba restar', () => {
@@ -34,8 +34,6 @@ describe('Casos de prueba Busqueda', () => {
   });
 
   it('Busqueda con resultados', () => {
-    //cy.get('.SearchTemplate_heading__input__X2uCO').type('Products');
-    //cy.get('.SearchTemplate_heading__submit__fsd7Q').click();
     indexPage.search('Products');
     cy.wait(2000);
     cy.get(':nth-child(1) > .SearchResultItem_result-item__title__3sI2_').contains('Products');
@@ -43,6 +41,8 @@ describe('Casos de prueba Busqueda', () => {
   it('escribir y borrar', () => {
     //si se va a probar distintos comportamientos de un elemento mejor se encadena todo
     cy.get('.SearchTemplate_heading__input__X2uCO').clear().type('Products').clear().type('Hola');
+    //hace lo mismo pero usando funciones custom de cypress
+    cy.escribirYBorrar('Products', 'Hola');
   });
 
   after(() => {
