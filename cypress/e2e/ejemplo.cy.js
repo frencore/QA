@@ -34,6 +34,7 @@ describe('Casos de prueba Busqueda', () => {
   });
 
   it('Busqueda con resultados', () => {
+    //trae locator desde fixtures index.json la accion es pages index.js
     indexPage.search('Products');
     cy.wait(2000);
     cy.get(':nth-child(1) > .SearchResultItem_result-item__title__3sI2_').contains('Products');
@@ -42,7 +43,7 @@ describe('Casos de prueba Busqueda', () => {
     //si se va a probar distintos comportamientos de un elemento mejor se encadena todo
     cy.get('.SearchTemplate_heading__input__X2uCO').clear().type('Products').clear().type('Hola');
     //hace lo mismo pero usando funciones custom de cypress
-    cy.escribirYBorrar('Products', 'Hola');
+    cy.escribirYBorrar('Products', 'Hola'); 
   });
 
   after(() => {
