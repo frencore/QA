@@ -26,7 +26,7 @@ describe('Casos de prueba Busqueda', () => {
 
   beforeEach(() => {
     cy.log('Ejecutando precondiciones POR CADA PRUEBA');
-    cy.visit('https://www.tricentis.com/search');
+    cy.visit('/search');
     cy.wait(2000);
   });
   afterEach(() => {
