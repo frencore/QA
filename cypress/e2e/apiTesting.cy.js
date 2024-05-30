@@ -8,7 +8,14 @@ describe('pruebas de apis', () => {
         ).then((response) => {
             expect(response.status).to.equal(200);
             expect(response).property('status').to.equal(200);
-            cy.log(response.body.name);
+            //imprime la respuesta JSON
+            cy.log(JSON.stringify(response, null, "\t"));
+            //imprime la primera ability
+            cy.log(response.body.abilities[0].ability);
+            //imprime la segunda ability
+            cy.log(response.body.abilities[1].ability);
+            //imprime el peso
+            cy.log('peso ' + response.body.weight + 'kg');
         });
     });
 
