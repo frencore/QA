@@ -1,13 +1,13 @@
 # Descripcion del proyecto
 Este es un repositorio para POC de Cypress, con pruebas funcionales y api testing, en base a estructura recomandada por Cypress y Page Object (no recomendado).
 
-# Comando para instalar Cypress
+## Comando para instalar Cypress
     npm install cypress --save-dev
 
-# Comando para ejecutar proyecto
+## Comando para ejecutar proyecto
     .\node_modules\.bin\cypress open 
 
-# Comando para ejecutar modo Headless
+## Comando para ejecutar modo Headless
     .\node_modules\.bin\cypress run 
 
 # Configuracion
