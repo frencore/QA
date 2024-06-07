@@ -1,7 +1,6 @@
 
-> [!IMPORTANT]  
-> Descripcion del proyecto
->Este es un repositorio para POC de Cypress, con pruebas funcionales y api testing, en base a >estructura recomandada por Cypress y Page Object (no recomendado).
+# Descripcion del proyecto
+Este es un repositorio para POC de Cypress, con pruebas funcionales y api testing, en base a estructura recomandada por Cypress y Page Object (no recomendado).
 
 ## Comando para instalar Cypress
     npm install cypress --save-dev
