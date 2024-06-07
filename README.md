@@ -1,6 +1,8 @@
 # Descripcion del proyecto
 Este es un repositorio para POC de Cypress, con pruebas funcionales y api testing, en base a estructura recomandada por Cypress y Page Object (no recomendado).
 
+> [!IMPORTANT]  
+
 ## Comando para instalar Cypress
     npm install cypress --save-dev
 
@@ -13,8 +15,8 @@ Este es un repositorio para POC de Cypress, con pruebas funcionales y api testin
 # Configuracion
     https://docs.cypress.io/guides/references/configuration#Screenshots 
 
- ## Notas:
- errores al ejecutar script Windows
+ > [!NOTE]
+ > errores al ejecutar script Windows
  
  ## Error de politicas
 
@@ -26,6 +28,7 @@ Este es un repositorio para POC de Cypress, con pruebas funcionales y api testin
 
 ## Para Habilitar videos de las pruebas
     https://docs.cypress.io/guides/guides/screenshots-and-videos 
+
 
 ### cypress.config.js
 
