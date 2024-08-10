@@ -30,7 +30,7 @@ describe("Hogin y completar formulario", () => {
           var cadena2 = cadena.match(regex)[0];
           now.setDate(now.getDate() + parseInt(cadena2));
           // cy.log("nueva fecha " + now);
-          const dia = now.getDate() + 1;
+          const dia = now.getDate();
           const mes = now.getMonth() + 1;
           const year = now.getFullYear();
 
@@ -86,12 +86,15 @@ describe("Hogin y completar formulario", () => {
               cy.get(`.grid > :nth-child(${index + 1})`)
                 .invoke("text")
                 .then((val5) => {
-                  
                   const valorCheckbox = Number(val5);
                   const resto = valorCheckbox % multiplo2;
 
                   if (resto == 0) {
                     cy.get(`.grid > :nth-child(${index + 1})`).click();
+                    // cy.contains(valorCheckbox)
+                    //   .parent()
+                    //   .find("input[type=checkbox]")
+                    //   .check();
                   }
                 });
             }
@@ -99,7 +102,7 @@ describe("Hogin y completar formulario", () => {
           });
         });
 
-      cy.get(':nth-child(2) > .border-black').click(); //boton enviar
+      cy.get(":nth-child(2) > .border-black").click(); //boton enviar
       cy.wait(3000);
     }
   });
